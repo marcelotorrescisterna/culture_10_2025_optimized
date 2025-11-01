@@ -6,7 +6,7 @@ from typing import Dict, List, Optional, Set
 
 # Hardware options
 N_CORES: int = 32  # max number of CPU cores to use
-RAM_CORENLP: str = "24G"  # 200G max RAM allocated for parsing using CoreNLP; increase to speed up parsing
+RAM_CORENLP: str = "200G"  # 200G max RAM allocated for parsing using CoreNLP; increase to speed up parsing
 PARSE_CHUNK_SIZE: int = 2000 # number of lines in the input file to process uing CoreNLP at once. Increase on workstations with larger RAM (e.g. to 1000 if RAM is 64G)  
 
 # Directory locations
@@ -31,64 +31,51 @@ N_WORDS_DIM: int = 500  # max number of words in each dimension of the dictionar
 DICT_RESTRICT_VOCAB = None # change to a fraction number (e.g. 0.2) to restrict the dictionary vocab in the top 20% of most frequent vocab
 
 # Inputs for constructing the expanded dictionary
-DIMS: List[str] = ["integrity", "teamwork", "innovation", "respect", "quality"]
+DIMS: List[str] = ["vendor", "product", "technology"]
 SEED_WORDS: Dict[str, List[str]] = {
-    "integrity": [
-        "integrity",
-        "ethic",
-        "ethical",
-        "accountable",
-        "accountability",
-        "trust",
-        "honesty",
-        "honest",
-        "honestly",
-        "fairness",
-        "responsibility",
-        "responsible",
-        "transparency",
-        "transparent",
+    "vendor": [
+        "openai",
+        "lightricks",
+        "stability_ai",
+        "google_ai",
+        "google_deepmind",
+        "cohere",
+        "hugging_face",
+        "bard",
+        "whisper",
+        "midjourney",
+        "claude",
+        "glean",
+        "jasper",
+        "anthropic",
     ],
-    "teamwork": [
-        "teamwork",
-        "collaboration",
-        "collaborate",
-        "collaborative",
-        "cooperation",
-        "cooperate",
-        "cooperative",
+    "product": [
+        "gpt",
+        "gpt3",
+        "gpt35",
+        "chatgpt",
+        "makersuite",
+        "palm_api",
+        "rerank",
+        "alphafold",
+        "stable_difussion",
+        "copilot",
+        "power_bi",
+        "dalle"
     ],
-    "innovation": [
-        "innovation",
-        "innovate",
-        "innovative",
-        "creativity",
-        "creative",
-        "create",
-        "passion",
-        "passionate",
-        "efficiency",
-        "efficient",
-        "excellence",
-        "pride",
-    ],
-    "respect": [
-        "respectful",
-        "talent",
-        "talented",
-        "employee",
-        "dignity",
-        "empowerment",
-        "empower",
-    ],
-    "quality": [
-        "quality",
-        "customer",
-        "customer_commitment",
-        "dedication",
-        "dedicated",
-        "dedicate",
-        "customer_expectation",
+    "technology": [
+        "large_language_model",
+        "prompt_learning",
+        "control_net",
+        "text_to_image",
+        "gan",
+        "transformer",
+        "llm",
+        "generative_ai",
+        "natural_language_generation",
+        "diffusion_model",
+        "variational_autoencoder",
+        "generative_pretrained_transformer",
     ],
 }
 # DIMS: List[str] = ["generativeai", "nongenerativeai"]
