@@ -6,13 +6,13 @@ from typing import Dict, List, Optional, Set
 
 # Hardware options
 N_CORES: int = 32  # max number of CPU cores to use
-RAM_CORENLP: str = "200G"  # 200G max RAM allocated for parsing using CoreNLP; increase to speed up parsing
+RAM_CORENLP: str = "90G"  # 200G max RAM allocated for parsing using CoreNLP; increase to speed up parsing
 PARSE_CHUNK_SIZE: int = 2000 # number of lines in the input file to process uing CoreNLP at once. Increase on workstations with larger RAM (e.g. to 1000 if RAM is 64G)  
 
 # Directory locations
 os.environ[
     "CORENLP_HOME"
-] = "/home/marcelo/Escritorio/AsesoriasJT/stanford-corenlp-4.5.7"  # location of the CoreNLP models; use / to seperate folders
+] = "/home/ubuntu/stanford-corenlp-4.5.7"  # location of the CoreNLP models; use / to seperate folders
 DATA_FOLDER: str = "data/"
 MODEL_FOLDER: str = "models/" # will be created if does not exist
 OUTPUT_FOLDER: str = "outputs/" # will be created if does not exist; !!! WARNING: existing files will be removed !!!
